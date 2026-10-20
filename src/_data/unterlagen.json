@@ -1,0 +1,39 @@
+{
+  "_hinweis": "Unterlagen zum Download auf studie.html. Ein Dokument ohne 'file' erscheint als 'folgt'. Neue PDFs nach src/unterlagen/ legen und hier eintragen.",
+  "gruppen": [
+    {
+      "key": "patienten",
+      "titel": "Für Menschen mit Diabetes",
+      "info": [
+        {
+          "zentrum": "HDZ NRW, Bad Oeynhausen",
+          "file": "/unterlagen/06_260608-Patienteninfo-MiA-DDG-MmD.pdf",
+          "seiten": 8,
+          "version": "1",
+          "stand": "08.06.2026"
+        },
+        {
+          "zentrum": "Universitätsklinikum Heidelberg"
+        }
+      ],
+      "flyer": {}
+    },
+    {
+      "key": "fachpersonal",
+      "titel": "Für Fachpersonal",
+      "info": [
+        {
+          "zentrum": "HDZ NRW, Bad Oeynhausen",
+          "file": "/unterlagen/06_260608-Teilnehmerninfo-MiA-DDG-HCP.pdf",
+          "seiten": 9,
+          "version": "1",
+          "stand": "08.06.2026"
+        },
+        {
+          "zentrum": "Universitätsklinikum Heidelberg"
+        }
+      ],
+      "flyer": {}
+    }
+  ]
+}

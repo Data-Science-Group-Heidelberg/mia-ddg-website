@@ -283,6 +283,13 @@ p { margin: 0; text-wrap: pretty; }
 .notice svg circle { fill: var(--navy); }
 .notice svg rect { fill: var(--paper); }
 
+/* Ethikvotum: geprüfte Angabe mit Häkchen */
+.approval { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: 0.65rem; align-items: start; max-width: var(--measure); font-size: var(--step--1); color: var(--muted); }
+.approval svg { width: 1.5rem; height: 1.5rem; margin-top: 0.05rem; }
+.approval circle { fill: var(--navy); }
+.approval path { fill: none; stroke: var(--on-navy); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.approval strong { font-family: var(--font-display); color: var(--navy); }
+
 /* Phasen */
 .phases { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
 .phase { border-top: 4px solid var(--line); padding-top: 1rem; display: grid; gap: 0.5rem; align-content: start; }
@@ -306,8 +313,9 @@ p { margin: 0; text-wrap: pretty; }
 .org-head { display: grid; gap: 0.45rem; align-content: start; }
 .org-head .where { color: var(--muted); }
 .people { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); align-content: start; }
-.person { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.9rem; align-items: center; }
-.avatar { width: 4.5rem; height: 4.5rem; object-fit: cover; object-position: 50% 35%; border-radius: 50%; display: grid; place-items: center; background: var(--sky); color: var(--navy); font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.person { display: grid; grid-template-columns: 5.25rem minmax(0, 1fr); gap: 1rem; align-items: center; }
+/* Porträt im Hochformat 3:4 (wie die Originalfotos), damit Köpfe nicht angeschnitten werden */
+.avatar { width: 5.25rem; height: 7rem; border-radius: 12px; object-fit: cover; object-position: 50% 20%; background: var(--sky); display: grid; place-items: center; color: var(--navy); font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
 .person .name { font-weight: 700; }
 .person .role { color: var(--muted); font-size: var(--step--1); }
 .tasks { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: 0; }
@@ -324,7 +332,9 @@ p { margin: 0; text-wrap: pretty; }
 .doc-title { font-weight: 700; }
 .doc-meta { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
 .doc .btn { padding: 0.5rem 1rem; font-size: 0.92rem; }
-@media (max-width: 560px) { .doc { grid-template-columns: 2.6rem minmax(0, 1fr); } .doc .btn { grid-column: 2; justify-self: start; } }
+.doc-soon { font-family: var(--font-display); font-weight: 700; font-size: var(--step--1); color: var(--muted); white-space: nowrap; }
+.doc-group { display: grid; gap: 0.8rem; min-width: 0; scroll-margin-top: 9rem; }
+@media (max-width: 560px) { .doc { grid-template-columns: 2.6rem minmax(0, 1fr); } .doc .btn, .doc-soon { grid-column: 2; justify-self: start; } }
 
 /* Tabs Studienteilnahme */
 .switch { display: flex; flex-wrap: wrap; gap: 0.5rem; }

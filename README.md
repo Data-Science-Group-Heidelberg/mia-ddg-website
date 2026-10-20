@@ -18,6 +18,7 @@ npm start       # http://localhost:8080, lädt bei jeder Änderung neu
 | `src/_data/site.json` | Seitenname und Navigationspunkte |
 | `src/aktuelles/*.md` | Blogbeiträge |
 | `src/_data/publications.yaml` | Publikationsliste |
+| `src/_data/unterlagen.json` | Unterlagen zum Download (Teilnehmendeninformation je Studienzentrum, Flyer); PDFs liegen in `src/unterlagen/`. Ein Eintrag ohne `file` erscheint als „Folgt in Kürze“ |
 | `src/style.css`, `src/fonts/`, `src/unterlagen/` | werden unverändert kopiert |
 
 ## Neuen Beitrag schreiben
@@ -50,7 +51,7 @@ Lokal bauen (ohne Entwürfe), etwa um vorher zu prüfen:
 npm run build
 ```
 
-Beiträge mit `draft: true` im Kopfbereich erscheinen nur in der lokalen Vorschau (`npm start`), nie auf der veröffentlichten Seite.
+Beiträge mit `draft: true` im Kopfbereich erscheinen nirgends, weder in der Vorschau noch auf der veröffentlichten Seite. Um Entwürfe lokal anzusehen, die Vorschau mit `npm run start:drafts` statt `npm start` starten.
 
 ### Einmalige Einrichtung
 

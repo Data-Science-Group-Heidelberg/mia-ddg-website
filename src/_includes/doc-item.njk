@@ -1,0 +1,9 @@
+{#- Ein Eintrag in der Unterlagen-Liste. Erwartet: d (Dokument), docTitle, docText -#}
+<li class="doc">
+  <svg class="doc-icon" viewBox="0 0 26 31" aria-hidden="true"><path class="sheet" d="M2 1.5h15l7 7V29.5H2z"/><path class="fold" d="M17 1.5v7h7z"/><text x="5" y="24">PDF</text></svg>
+  <div>
+    <div class="doc-title">{{ docTitle }}</div>
+    <div class="doc-meta">{{ docText }}{% if d.file %}<br>PDF{% if d.seiten %}, {{ d.seiten }} Seiten{% endif %}{% if d.version %}, Version {{ d.version }}{% endif %}{% if d.stand %} vom {{ d.stand }}{% endif %}{% endif %}</div>
+  </div>
+  {% if d.file %}<a class="btn btn-secondary" href="{{ d.file }}" target="_blank" rel="noopener">PDF öffnen</a>{% else %}<span class="doc-soon">Folgt in Kürze</span>{% endif %}
+</li>

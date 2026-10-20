@@ -9,9 +9,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
-  // Entwürfe (draft: true im Front Matter) erscheinen nur in der lokalen Vorschau (npm start), nie im Build
+  // Entwürfe (draft: true im Front Matter) werden nie gebaut; nur "npm run start:drafts" zeigt sie lokal an
   eleventyConfig.addPreprocessor("drafts", "*", (data) => {
-    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") return false;
+    if (data.draft && !process.env.SHOW_DRAFTS) return false;
   });
 
   // "15. Oktober 2026"

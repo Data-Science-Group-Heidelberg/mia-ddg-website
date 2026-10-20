@@ -18,10 +18,9 @@
   type: Konferenzbeitrag
   tbd: true
 
-- title: "[Titel des Artikels]"
-  authors: "[Autor:innen]"
-  venue: "[Zeitschrift]"
+- title: "Facts-of-the-Case: Answering Complex Patient Questions"
+  authors: "Marina Walther, Michael Gertz"
+  venue: "Datenbanksysteme für Business, Technologie und Web"
   year: 2025
   type: Artikel
-  doi: "10.0000/platzhalter"
-  tbd: true
+  doi: "10.18420/BTW2025-07"
