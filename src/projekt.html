@@ -1,0 +1,123 @@
+---
+title: "Projekt"
+description: "Hintergrund, Ziele und Funktionsweise von MiA DDG."
+nav: projekt
+permalink: /projekt.html
+---
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h1>Da frag’ ich mal den Chatbot</h1>
+      <p class="lead">KI zur verbesserten Wissensvermittlung für Menschen mit Diabetes und Gesundheitsfachkräfte ohne diabetologische Spezialisierung.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="prose">
+        <h2>Gutes Wissen ist vorhanden, aber schwer zu finden</h2>
+        <p>Menschen mit Diabetes treffen im Durchschnitt rund 180 gesundheitsrelevante Entscheidungen pro Tag. Dieses ständige Selbstmanagement trägt wesentlich zu Diabetes-Distress und psychischer Belastung bei.</p>
+        <p>Auch Ärzt:innen und Gesundheitsfachkräfte ohne diabetologische Spezialisierung stehen regelmäßig vor Fragen zu Diagnostik, Akutversorgung und Therapieanpassung.</p>
+        <p>Fachgesellschaften veröffentlichen hochwertige Leitlinien, Praxisempfehlungen und Patienteninformationen. Im Alltag sind diese aber oft nicht schnell genug zugänglich. Jede fünfte Person nutzt das Internet oder soziale Medien als erste Anlaufstelle für Gesundheitsinformationen, und gesicherte Informationen dort zu finden, überfordert viele.</p>
+      </div>
+      <div class="prose">
+        <h2>Was MiA DDG erreichen soll</h2>
+        <ul class="checklist">
+          <li>Die Diabeteskompetenz von Menschen mit Diabetes, ihren Angehörigen und Behandelnden verbessern</li>
+          <li>Diabetes-Distress verringern und das Alltagsmanagement erleichtern</li>
+          <li>Fachpersonal ohne diabetologische Spezialisierung schnell und leitlinienbasiert unterstützen</li>
+          <li>Patientensicherheit stärken und die Versorgung vereinheitlichen</li>
+          <li>Ein übertragbares Modell schaffen, wie medizinische Leitlinien in KI-Systeme eingebunden werden können</li>
+          <li>Akzeptanz, Qualität und Nutzbarkeit in Klinik und Alltag wissenschaftlich prüfen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:start">
+      <div class="section-head">
+        <h2>Jede Antwort geht auf eine nachprüfbare Quelle zurück</h2>
+        <p>MiA erfindet keine Inhalte, sondern sucht in einer kuratierten Wissensbasis. Das Verfahren heißt Retrieval-Augmented Generation (RAG): Zuerst werden die passenden Textstellen gefunden, dann formuliert ein Sprachmodell daraus eine verständliche Antwort.</p>
+        <div class="flow-card" style="margin-top:1rem">{% include "flow.njk" %}</div>
+      </div>
+      <ol class="pipeline">
+        <li><span class="dot">1</span><div><h3>Wissensbasis aufbauen</h3><p>DDG-Leitlinien, Praxisempfehlungen, Patienteninformationen und Inhalte von diabinfo.de werden aufbereitet und durchsuchbar gemacht.</p></div></li>
+        <li><span class="dot">2</span><div><h3>Frage verstehen</h3><p>Sie fragen in natürlicher Sprache, per Text oder optional per Sprache. Fehlen wichtige Angaben, fragt MiA nach.</p></div></li>
+        <li><span class="dot">3</span><div><h3>Passende Stellen finden</h3><p>Das System identifiziert die relevanten Abschnitte in den Leitlinien und Empfehlungen.</p></div></li>
+        <li class="answer"><span class="dot">4</span><div><h3>Antwort mit Quellenangabe</h3><p>MiA fasst die Inhalte verständlich zusammen und verweist auf die genaue Fundstelle.</p></div></li>
+        <li><span class="dot">5</span><div><h3>Prüfung durch Fachleute</h3><p>Klinische Expert:innen prüfen die Qualität der Antworten systematisch.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Drei Themenmodule zum Start</h2>
+      <p>Die Module decken sowohl Fragen aus dem Alltag von Betroffenen als auch klinische Versorgungssituationen ab.</p>
+    </div>
+    <div class="grid grid-3 modules">
+      <div class="card"><h3>Diabetesdiagnose</h3><p>Was bedeutet die Diagnose, welche Werte sind wichtig, wie geht es weiter?</p></div>
+      <div class="card"><h3>Diabetes im Krankenhaus</h3><p>Versorgung von Menschen mit Diabetes während eines stationären Aufenthalts.</p></div>
+      <div class="card"><h3>Diabetisches Fußsyndrom</h3><p>Vorbeugung, Erkennung und Behandlung von Fußkomplikationen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Wissensvermittlung im Dialog</h2>
+      <p>Menschen bringen sehr unterschiedliche Vorkenntnisse und Sprachniveaus mit. MiA ist deshalb als Web-App im Browser nutzbar, ohne Installation, mit optionaler Sprachein- und -ausgabe und anpassbarer Schriftgröße.</p>
+    </div>
+    <div class="section-head">
+      <h2>Vom Prototyp zur Plattform</h2>
+    </div>
+    <div class="phases">
+      <div class="phase now"><span class="pill">Phase 1, aktuell</span><h3>Pilotprojekt</h3><p>Entwicklung und Evaluation eines Prototyps mit drei Themenmodulen. Feldtests am HDZ NRW und am Universitätsklinikum Heidelberg.</p></div>
+      <div class="phase"><span class="pill">Phase 2</span><h3>Erweiterter Chatbot</h3><p>Ausbau zu einer umfassenden diabetologischen Wissensbasis mit weiteren Modulen, etwa zu Ernährung und Bewegung.</p></div>
+      <div class="phase"><span class="pill">Phase 3</span><h3>Entscheidungsunterstützung</h3><p>Weiterentwicklung zu einem klinischen Entscheidungsunterstützungssystem, übertragbar auf weitere Krankheitsbilder.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="prose">
+        <h2>Ein Informationsangebot, kein Medizinprodukt</h2>
+        <p>Der Prototyp stellt evidenzbasierte Inhalte aus öffentlich zugänglichen Leitlinien und Empfehlungen verständlich bereit. Er stellt keine Diagnosen, gibt keine individuellen Therapieempfehlungen und keine patientenspezifischen Handlungsvorgaben. Medizinische Bewertung und Entscheidung bleiben vollständig bei qualifizierten Fachpersonen.</p>
+      </div>
+      <div class="prose">
+        <h2>So gehen wir mit den Risiken von KI um</h2>
+        <ul class="checklist">
+          <li>Vertrauenswürdige Quellen im Zentrum, mit feingranularen Verweisen</li>
+          <li>Betrieb in einer sicheren Umgebung</li>
+          <li>Transparente Methoden und nachvollziehbare Ergebnisse</li>
+          <li>Fachliche Prüfung durch Expert:innen (Human-in-the-loop)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head"><h2>Literatur</h2></div>
+    <ol class="refs">
+      <li>Gong E et al. My Diabetes Coach, a Mobile App-Based Interactive Conversational Agent to Support Type 2 Diabetes Self-Management: Randomized Effectiveness-Implementation Trial. J Med Internet Res. 2020;22(11):e20322.</li>
+      <li>Wu Y et al. Application of Chatbots to Help Patients Self-Manage Diabetes: Systematic Review and Meta-Analysis. J Med Internet Res. 2024;26:e60380.</li>
+      <li>Nayak A et al. Use of Voice-Based Conversational Artificial Intelligence for Basal Insulin Prescription Management Among Patients With Type 2 Diabetes: A Randomized Clinical Trial. JAMA Netw Open. 2023;6(12):e2340232.</li>
+      <li>Walther M, Gertz M. Facts-of-the-Case: Answering Complex Patient Questions. Gesellschaft für Informatik, Bonn; 2025.</li>
+      <li>Deutsche Diabetes Gesellschaft. Deutscher Gesundheitsbericht Diabetes 2026.</li>
+    </ol>
+  </div>
+</section>
+

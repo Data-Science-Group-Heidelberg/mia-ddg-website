@@ -1,0 +1,13 @@
+{
+  "name": "MiA DDG",
+  "url": "https://www.mia-ddg.de",
+  "description": "MiA DDG – KI-gestützter Diabetes-Chatbot auf Basis der DDG-Leitlinien und Praxisempfehlungen.",
+  "nav": [
+    { "key": "start", "label": "Start", "url": "/" },
+    { "key": "projekt", "label": "Projekt", "url": "/projekt.html" },
+    { "key": "team", "label": "Team & Partner", "url": "/team.html" },
+    { "key": "aktuelles", "label": "Aktuelles", "url": "/aktuelles.html" },
+    { "key": "publikationen", "label": "Publikationen", "url": "/publikationen.html" },
+    { "key": "studie", "label": "Studienteilnahme", "url": "/studie.html", "cta": true }
+  ]
+}

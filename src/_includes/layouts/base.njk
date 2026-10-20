@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% if title and title != site.name %}{{ title }} · {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#253764">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ description or site.description }}">
+{%- if site.url %}
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/img/brand/mia-ddg-social.png">
+<meta property="og:image:width" content="1500">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="MiA DDG – My interactive Assistant">
+<meta name="twitter:card" content="summary_large_image">
+{%- endif %}
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="MiA DDG – zur Startseite">
+      {% include "mark.njk" %}
+      <span class="brand-text"><span class="brand-name">MiA <b>DDG</b></span><span class="brand-sub">My interactive Assistant</span></span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      {% for item in site.nav %}<a href="{{ item.url }}"{% if item.cta %} class="nav-cta"{% endif %}{% if nav == item.key %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+      <span class="a11y-tools">
+        <button class="fs-toggle" id="fs-toggle" type="button" aria-pressed="false" aria-label="Größere Schrift" title="Schrift vergrößern">A+</button>
+        <button class="fs-toggle" id="hc-toggle" type="button" aria-pressed="false" aria-label="Hoher Kontrast" title="Kontrast erhöhen"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main id="inhalt" tabindex="-1">
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3 class="footer-brand">{% include "mark.njk" %}<span>MiA <b>DDG</b></span></h3>
+      <p>KI-gestützte Wissensvermittlung auf Basis der Leitlinien und Praxisempfehlungen der Deutschen Diabetes Gesellschaft.</p>
+    </div>
+    <div>
+      <h3>Studienteilnahme</h3>
+      <ul>
+        <li><a href="/studie.html#patienten">Für Menschen mit Diabetes</a></li>
+        <li><a href="/studie.html#fachpersonal">Für Fachpersonal</a></li>
+        <li><a href="/studie.html#unterlagen">Unterlagen zum Download</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p>Studienteam MiA DDG<br><span class="tbd">[E-Mail-Adresse des Studienteams]</span></p>
+    </div>
+    <div>
+      <h3>Rechtliches</h3>
+      <ul>
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutzerklärung der Website</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-logos">
+    <h3>Beteiligte Einrichtungen und Förderung</h3>
+    <div class="logo-row">{% for key in logos.footer %}{% set logoKey = key %}{% set logoDecorative = false %}{% include "logo.njk" %}{% endfor %}</div>
+  </div>
+  <p class="footer-note">Gefördert durch die Deutsche Diabetes Gesellschaft (DDG). MiA DDG ist ein zusätzliches Informationsangebot. Der Chatbot ersetzt keine ärztliche Beratung, Behandlung oder Therapieentscheidung.</p>
+</footer>
+<script>
+(function(){
+  var root = document.documentElement;
+  // Schalter für Schriftgröße und Kontrast; Einstellung bleibt nur lokal im Browser gespeichert
+  function setup(id, cls, key, titleOn, titleOff){
+    var btn = document.getElementById(id);
+    function apply(on){ root.classList.toggle(cls, on); if(btn){ btn.setAttribute('aria-pressed', on ? 'true' : 'false'); btn.title = on ? titleOn : titleOff; } }
+    var saved = false; try { saved = localStorage.getItem(key) === '1'; } catch(e) {}
+    apply(saved);
+    if(btn) btn.addEventListener('click', function(){ var on = !root.classList.contains(cls); apply(on); try { localStorage.setItem(key, on ? '1' : '0'); } catch(e) {} });
+  }
+  setup('fs-toggle', 'fs-large', 'mia-fs', 'Normale Schriftgröße', 'Schrift vergrößern');
+  setup('hc-toggle', 'hc', 'mia-hc', 'Normaler Kontrast', 'Kontrast erhöhen');
+})();
+</script>
+</body>
+</html>

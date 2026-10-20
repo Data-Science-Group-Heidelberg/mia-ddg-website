@@ -1,0 +1,31 @@
+---
+title: Publikationen
+description: Wissenschaftliche Publikationen, Vorträge und Poster des MiA-DDG-Teams.
+nav: publikationen
+permalink: /publikationen.html
+---
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h1>Veröffentlichungen aus dem Projekt</h1>
+      <p class="lead">Artikel, Konferenzbeiträge, Poster und Vorträge des MiA-DDG-Teams.</p>
+    </div>
+    {% for group in publications | byYear %}
+    <div class="pub-year">
+      <h2>{{ group.year }}</h2>
+      <ul class="pubs">
+        {% for p in group.items %}
+        <li class="pub{% if p.tbd %} is-tbd{% endif %}">
+          <span class="pub-type">{{ p.type }}</span>
+          <span class="pub-title">{% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% elif p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
+          <span class="pub-meta">{{ p.authors }}. {{ p.venue }}.{% if p.doi %} DOI: {{ p.doi }}{% endif %}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% else %}
+    <p class="muted">Noch keine Publikationen.</p>
+    {% endfor %}
+  </div>
+</section>

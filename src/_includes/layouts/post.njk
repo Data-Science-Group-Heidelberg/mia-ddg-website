@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="band">
+  <article class="wrap prose post">
+    <p class="breadcrumb"><a href="/aktuelles.html">Aktuelles</a></p>
+    <div class="section-head">
+      <p class="date"><time datetime="{{ page.date | isoDate }}">{{ page.date | dateDE }}</time></p>
+      <h1>{{ title }}</h1>
+      {% if summary %}<p class="lead">{{ summary }}</p>{% endif %}
+    </div>
+    {% if image %}<img src="{{ image }}" alt="{{ imageAlt }}">{% endif %}
+    {{ content | safe }}
+    <p><a href="/aktuelles.html">← Alle Beiträge</a></p>
+  </article>
+</section>

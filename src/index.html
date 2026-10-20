@@ -1,0 +1,103 @@
+---
+title: "MiA DDG"
+description: "MiA DDG – KI-gestützter Diabetes-Chatbot auf Basis der DDG-Leitlinien und Praxisempfehlungen."
+nav: start
+permalink: /
+---
+
+<section class="band hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Fragen zu Diabetes? <span>MiA antwortet mit dem Wissen der DDG.</span></h1>
+      <p class="lead">MiA DDG ist ein KI-gestützter Chatbot. Er beantwortet Fragen rund um Diabetes auf Grundlage der Leitlinien und Praxisempfehlungen der Deutschen Diabetes Gesellschaft (DDG) und der Inhalte von diabinfo.de: verständlich, im Gespräch und immer mit Quellenangabe.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="studie.html">An der Studie teilnehmen</a>
+        <a class="btn btn-secondary" href="projekt.html">Mehr über das Projekt</a>
+      </div>
+      <p class="funded-by"><span>Gefördert durch</span>{% set logoKey = "ddg" %}{% set logoDecorative = false %}{% include "logo.njk" %}</p>
+    </div>
+    {# Platzhalter bis zum Plattform-Video #}
+    <div class="flow-card">{% include "flow.njk" %}</div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Für wen ist MiA DDG?</h2>
+      <p>Zwei Zielgruppen, eine verlässliche Wissensbasis.</p>
+    </div>
+    <div class="split">
+      <article class="audience">
+        <span class="tag">Menschen mit Diabetes</span>
+        <h3>Antworten auf Fragen aus dem Alltag</h3>
+        <p>Menschen mit Diabetes treffen täglich viele gesundheitsbezogene Entscheidungen. MiA hilft, qualitätsgesicherte Informationen schnell zu finden und zu verstehen, auch für Angehörige und Menschen mit neuer Diagnose.</p>
+        <a class="btn btn-secondary" href="studie.html#patienten">Studie für Patient:innen</a>
+      </article>
+      <article class="audience">
+        <span class="tag">Fachpersonal</span>
+        <h3>Leitlinienwissen im Versorgungsalltag</h3>
+        <p>Ärzt:innen, Pflegekräfte und weitere Gesundheitsfachkräfte ohne diabetologische Spezialisierung erhalten kontextbezogen Zugang zu den aktuellen DDG-Empfehlungen, kurz und mit Verweis auf die Originalstelle.</p>
+        <a class="btn btn-secondary" href="studie.html#fachpersonal">Studie für Fachpersonal</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>So funktioniert MiA DDG</h2>
+    </div>
+    <div class="grid grid-3 ruled">
+      <div class="card"><h3>Fragen</h3><p>Sie stellen Ihre Frage in eigenen Worten, so wie Sie sie auch einer Fachperson stellen würden.</p></div>
+      <div class="card"><h3>Antworten</h3><p>MiA sucht die passenden Stellen in DDG-Leitlinien, Praxisempfehlungen und auf diabinfo.de und fasst sie verständlich zusammen, mit Angabe der Quelle.</p></div>
+      <div class="card"><h3>Mitgestalten</h3><p>In einer wissenschaftlichen Studie untersuchen wir, wie hilfreich und praktikabel MiA im Alltag ist. Ihre Erfahrungen fließen in die Weiterentwicklung ein.</p></div>
+    </div>
+    <div class="notice"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12"/><rect x="10.8" y="10" width="2.4" height="8" rx="1.2"/><rect x="10.8" y="5.6" width="2.4" height="2.6" rx="1.2"/></svg><p><strong>Wichtig:</strong> MiA DDG ist ein zusätzliches Informationsangebot. Der Chatbot ersetzt keine ärztliche Beratung, Behandlung oder Therapieentscheidung.</p></div>
+  </div>
+</section>
+
+<section class="band deep">
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:center">
+      <div class="section-head">
+        <h2>Wir suchen Teilnehmende für unsere Studie</h2>
+        <p>Die Studie läuft am Herz- und Diabeteszentrum NRW in Bad Oeynhausen und am Universitätsklinikum Heidelberg. Hier finden Sie alle Informationen und Unterlagen zur Teilnahme.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="studie.html">Informationen zur Teilnahme</a>
+        <a class="btn btn-ghost" href="studie.html#unterlagen">Unterlagen herunterladen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if collections.posts.length %}
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Aktuelles aus dem Projekt</h2>
+    </div>
+    <div class="post-list">
+      {% for post in collections.posts | head(3) %}{% include "post-card.njk" %}{% endfor %}
+    </div>
+    <p><a href="/aktuelles.html">Alle Beiträge ansehen</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ein Projekt aus Klinik, Informatik und Fachgesellschaft</h2>
+    </div>
+    <div class="grid grid-3 ruled">
+      <div class="card"><h3>HDZ NRW, Bad Oeynhausen</h3><p class="muted">Universitätsklinik der Ruhr-Universität Bochum. Klinische Leitung und Studienzentrum</p></div>
+      <div class="card"><h3>Universität Heidelberg</h3><p class="muted">Data Science Group, Institut für Informatik. Technische Entwicklung</p></div>
+      <div class="card"><h3>Universitätsklinikum Heidelberg</h3><p class="muted">Klinische Expertise und Studienzentrum</p></div>
+    </div>
+    <p>Gefördert durch die Deutsche Diabetes Gesellschaft (DDG). <a href="team.html">Team und Partner ansehen</a></p>
+  </div>
+</section>
+

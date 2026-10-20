@@ -1,0 +1,48 @@
+{
+  "ddg": {
+    "name": "Deutsche Diabetes Gesellschaft",
+    "src": "/img/logos/ddg.webp",
+    "w": 571,
+    "h": 120
+  },
+  "kommission": {
+    "name": "Kommission Digitalisierung der DDG",
+    "src": "/img/logos/kommission-digitalisierung.webp",
+    "w": 160,
+    "h": 160
+  },
+  "hdz": {
+    "name": "Herz- und Diabeteszentrum NRW",
+    "src": "/img/logos/hdz-nrw.svg",
+    "w": 390,
+    "h": 126
+  },
+  "rub": {
+    "name": "Ruhr-Universität Bochum",
+    "src": "/img/logos/rub.svg",
+    "w": 122,
+    "h": 23,
+    "onDark": true
+  },
+  "uniHd": {
+    "name": "Universität Heidelberg",
+    "src": "/img/logos/uni-heidelberg.webp",
+    "w": 306,
+    "h": 160,
+    "scale": 1.35
+  },
+  "ukhd": {
+    "name": "Universitätsklinikum Heidelberg",
+    "src": "/img/logos/ukhd.webp",
+    "w": 240,
+    "h": 240,
+    "scale": 1.9
+  },
+  "footer": [
+    "ddg",
+    "hdz",
+    "rub",
+    "uniHd",
+    "ukhd"
+  ]
+}

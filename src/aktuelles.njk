@@ -1,0 +1,22 @@
+---
+title: Aktuelles
+description: Neuigkeiten aus dem Projekt MiA DDG, Berichte von Konferenzen und Veranstaltungen.
+nav: aktuelles
+permalink: /aktuelles.html
+---
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h1>Neuigkeiten aus dem Projekt</h1>
+      <p class="lead">Berichte von Konferenzen, Vorträgen und Meilensteinen von MiA DDG.</p>
+    </div>
+    {% if collections.posts.length %}
+    <div class="post-list">
+      {% for post in collections.posts %}{% include "post-card.njk" %}{% endfor %}
+    </div>
+    {% else %}
+    <p class="muted">Noch keine Beiträge.</p>
+    {% endif %}
+  </div>
+</section>

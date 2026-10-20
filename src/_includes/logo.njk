@@ -1,0 +1,2 @@
+{%- set l = logos[logoKey] -%}
+<span class="logo-tile{% if l.onDark %} on-dark{% endif %}"{% if l.scale %} style="--logo-scale: {{ l.scale }}"{% endif %}><img src="{{ l.src }}" width="{{ l.w }}" height="{{ l.h }}" alt="{{ '' if logoDecorative else l.name }}" loading="lazy" decoding="async"></span>

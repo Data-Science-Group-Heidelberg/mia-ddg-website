@@ -1,0 +1,27 @@
+# Publikationen des Teams. Neueste Einträge einfach oben ergänzen;
+# die Seite gruppiert automatisch nach Jahr (absteigend).
+#
+# Felder:
+#   title    (Pflicht)  Titel der Publikation
+#   authors  (Pflicht)  Autor:innen, wie sie zitiert werden sollen
+#   venue    (Pflicht)  Zeitschrift, Konferenz oder Veranstaltung
+#   year     (Pflicht)  Erscheinungsjahr
+#   type     (Pflicht)  Artikel | Konferenzbeitrag | Poster | Vortrag
+#   doi      (optional) nur die DOI, z. B. 10.1000/xyz123
+#   url      (optional) Link, falls keine DOI vorhanden
+#   tbd      (optional) true markiert Platzhalter-Einträge
+
+- title: "[Titel des Konferenzbeitrags]"
+  authors: "[Autor:innen]"
+  venue: "[Konferenz, Ort]"
+  year: 2026
+  type: Konferenzbeitrag
+  tbd: true
+
+- title: "[Titel des Artikels]"
+  authors: "[Autor:innen]"
+  venue: "[Zeitschrift]"
+  year: 2025
+  type: Artikel
+  doi: "10.0000/platzhalter"
+  tbd: true

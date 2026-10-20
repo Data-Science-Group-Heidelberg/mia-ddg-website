@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/post.njk",
+  "nav": "aktuelles",
+  "permalink": "/aktuelles/{{ page.fileSlug }}.html"
+}
