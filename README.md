@@ -53,6 +53,25 @@ npm run build
 
 Beiträge mit `draft: true` im Kopfbereich erscheinen nirgends, weder in der Vorschau noch auf der veröffentlichten Seite. Um Entwürfe lokal anzusehen, die Vorschau mit `npm run start:drafts` statt `npm start` starten.
 
+### Vorschau für das Review
+
+Die Vorschau liegt bei Cloudflare Pages unter https://mia-ddg-preview.pages.dev (Projekt `mia-ddg-preview`) und ist mit einem gemeinsamen Passwort geschützt. Sie ist außerdem für Suchmaschinen gesperrt (`noindex` in jeder Seite, dazu der Header `X-Robots-Tag`, der auch PDFs abdeckt). Die echte Seite ist davon nicht betroffen.
+
+Veröffentlichen (baut `_preview/` und lädt es zusammen mit dem Passwortschutz aus `functions/` hoch):
+
+```bash
+npm run deploy:preview
+```
+
+Einmalig vorher:
+
+1. `npx wrangler@4.147.0 login` ausführen und im Browser bei Cloudflare anmelden.
+2. Passwort hinterlegen: `npx wrangler@4.147.0 pages secret put PREVIEW_PASSWORD --project-name mia-ddg-preview` ausführen und das Passwort eingeben. Danach `npm run deploy:preview` erneut ausführen, damit es gilt. Ohne Passwort zeigt die Vorschau nur einen Hinweis und bleibt gesperrt.
+
+Reviewer:innen öffnen den Link, geben im Anmeldefenster des Browsers einen beliebigen Benutzernamen und das Passwort ein. Passwort ändern: den Befehl aus Schritt 2 erneut ausführen, danach `npm run deploy:preview`.
+
+Lokal testen: Datei `.dev.vars` mit `PREVIEW_PASSWORD=…` anlegen (wird nicht committet), dann `npx wrangler@4.147.0 pages dev _preview`.
+
 ### Einmalige Einrichtung
 
 1. Im Repository unter **Settings → Pages** bei „Source“ **GitHub Actions** auswählen.

@@ -9,6 +9,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
+  // Vorschau-Build (npm run build:preview): für Suchmaschinen gesperrt, siehe base.njk und src/headers.11ty.js
+  eleventyConfig.addGlobalData("preview", Boolean(process.env.PREVIEW));
+
   // Entwürfe (draft: true im Front Matter) werden nie gebaut; nur "npm run start:drafts" zeigt sie lokal an
   eleventyConfig.addPreprocessor("drafts", "*", (data) => {
     if (data.draft && !process.env.SHOW_DRAFTS) return false;

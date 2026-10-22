@@ -5,7 +5,9 @@
   "scripts": {
     "start": "eleventy --serve",
     "start:drafts": "SHOW_DRAFTS=1 eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "build:preview": "PREVIEW=1 eleventy --output=_preview",
+    "deploy:preview": "npm run build:preview && npx --yes wrangler@4.147.0 pages deploy _preview --project-name mia-ddg-preview --branch main"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",

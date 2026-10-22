@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{%- if preview %}
+<meta name="robots" content="noindex, nofollow">
+{%- endif %}
 <title>{% if title and title != site.name %}{{ title }} · {% endif %}{{ site.name }}</title>
 <meta name="description" content="{{ description or site.description }}">
 <meta name="claude:viewport-fit-sides" content="cover">

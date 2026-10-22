@@ -1,5 +1,9 @@
 node_modules/
 _site/
+_preview/
+# Lokale Dateien von Cloudflare wrangler (Vorschau)
+.wrangler/
+.dev.vars
 .DS_Store
 
 # Originalfotos des Teams (nur lokal; veröffentlicht werden die verkleinerten Kopien in src/img/team)

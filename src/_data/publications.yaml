@@ -18,6 +18,12 @@
   type: Konferenzbeitrag
   tbd: true
 
+- title: "VSOU 2026: Ein KI-basiertes Dialogsystem zur verbesserten Wissensvermittlung für Menschen mit Diabetes und Non-Diabetologie-HCPs"
+  authors: "Marina Walther, Michael Gertz"
+  venue: "Jahrestagung derVereinigung Süddeutsche Orthopädie und Unfallchirurgie (VSOU), Baden-Baden"
+  year: 2026
+  type: Vortrag
+
 - title: "Facts-of-the-Case: Answering Complex Patient Questions"
   authors: "Marina Walther, Michael Gertz"
   venue: "Datenbanksysteme für Business, Technologie und Web"
