@@ -77,7 +77,7 @@ Lokal testen: Datei `.dev.vars` mit `PREVIEW_PASSWORD=…` anlegen (wird nicht c
 1. Im Repository unter **Settings → Pages** bei „Source“ **GitHub Actions** auswählen.
 2. Ebenda unter „Custom domain“ `www.mia-ddg.de` eintragen und speichern.
 3. Beim Domain-Anbieter folgende DNS-Einträge anlegen:
-   - `www` als **CNAME** auf `<konto>.github.io`, wobei `<konto>` der Name der GitHub-Organisation bzw. des Kontos ist, dem das Repository gehört (nicht der Repository-Name)
+   - `www` als **CNAME** auf `data-science-group-heidelberg.github.io` (Name der GitHub-Organisation, nicht des Repositorys)
    - für die Domain ohne `www` (`@`) vier **A**-Einträge: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (GitHub leitet dann auf `www` weiter)
 4. Sobald GitHub die Domain geprüft hat (kann bis zu 24 Stunden dauern), unter **Settings → Pages** „Enforce HTTPS“ aktivieren.
 5. Empfohlen: Die Domain in den Einstellungen der Organisation (**Settings → Pages → Verified domains**) verifizieren, damit niemand anderes sie mit GitHub Pages verwenden kann.

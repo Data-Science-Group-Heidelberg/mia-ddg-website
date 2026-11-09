@@ -16,7 +16,12 @@
           "zentrum": "Universitätsklinikum Heidelberg"
         }
       ],
-      "flyer": {}
+      "flyer": {
+        "file": "/unterlagen/MiA_DDG_Flyer_MmD.pdf",
+        "stand": "08.11.2026",
+        "version": "1",
+        "seiten": 2
+      }
     },
     {
       "key": "fachpersonal",
@@ -33,7 +38,12 @@
           "zentrum": "Universitätsklinikum Heidelberg"
         }
       ],
-      "flyer": {}
+      "flyer": {
+        "file": "/unterlagen/MiA_DDG_Flyer_HCP.pdf",
+        "stand": "08.11.2026",
+        "version": "1",
+        "seiten": 2
+      }
     }
   ]
 }

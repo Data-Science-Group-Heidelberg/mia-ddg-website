@@ -11,16 +11,16 @@
 #   url      (optional) Link, falls keine DOI vorhanden
 #   tbd      (optional) true markiert Platzhalter-Einträge
 
-- title: "[Titel des Konferenzbeitrags]"
-  authors: "[Autor:innen]"
-  venue: "[Konferenz, Ort]"
-  year: 2026
-  type: Konferenzbeitrag
-  tbd: true
+- title: "Advancing Continuous Glucose Monitoring for Inpatient Clinical Decision Support: Individual Algorithmic Mean Absolute Relative Difference"
+  authors: "Jill von Conta, Fin H. Bahnsen, Lutz Heinemann, Lukas van Baal, Jens Kleesiek, Dagmar Führer-Sakel, Susanne Tan"
+  venue: "Diabetes Care 2026;49(1):99-104"
+  year: 2025
+  type: Artikel
+  doi: "10.2337/dc25-1494"
 
 - title: "VSOU 2026: Ein KI-basiertes Dialogsystem zur verbesserten Wissensvermittlung für Menschen mit Diabetes und Non-Diabetologie-HCPs"
   authors: "Marina Walther, Michael Gertz"
-  venue: "Jahrestagung derVereinigung Süddeutsche Orthopädie und Unfallchirurgie (VSOU), Baden-Baden"
+  venue: "Jahrestagung der Vereinigung Süddeutsche Orthopädie und Unfallchirurgie (VSOU), Baden-Baden"
   year: 2026
   type: Vortrag
 

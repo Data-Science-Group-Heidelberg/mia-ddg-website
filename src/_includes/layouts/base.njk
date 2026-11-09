@@ -92,6 +92,19 @@
   }
   setup('fs-toggle', 'fs-large', 'mia-fs', 'Normale Schriftgröße', 'Schrift vergrößern');
   setup('hc-toggle', 'hc', 'mia-hc', 'Normaler Kontrast', 'Kontrast erhöhen');
+
+  // Kopfzeile beim Scrollen verkleinern. Zwei Schwellen, damit sie nicht flackert, wenn die kleinere Kopfzeile die Seite verschiebt
+  var header = document.querySelector('.site-header'), ticking = false;
+  function onScroll(){
+    ticking = false;
+    var y = window.scrollY, compact = header.classList.contains('is-compact');
+    if(!compact && y > 64) header.classList.add('is-compact');
+    else if(compact && y < 8) header.classList.remove('is-compact');
+  }
+  if(header){
+    window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    onScroll();
+  }
 })();
 </script>
 </body>
