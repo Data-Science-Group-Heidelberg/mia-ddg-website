@@ -32,7 +32,8 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          # Bis zum Livegang nur der Platzhalter; beim Livegang wieder auf _site umstellen
+          path: coming-soon
 
   deploy:
     needs: build
