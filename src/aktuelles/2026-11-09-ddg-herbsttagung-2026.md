@@ -2,11 +2,12 @@
 title: MiA DDG auf der DDG-Herbsttagung 2026 in Dresden
 date: 2026-11-09
 summary: Am Freitag, 13. November, stellen wir den aktuellen Stand von MiA DDG auf der Herbsttagung der Deutschen Diabetes Gesellschaft in Dresden vor – mit Einblicken in die laufende Testphase und Demovideos.
-# Screenshot des Prototyps: Datei nach src/aktuelles/img/ legen, die beiden Zeilen einkommentieren und den Dateinamen anpassen
-# image: /aktuelles/img/prototyp.png
-# imageAlt: Screenshot des aktuellen MiA-DDG-Prototyps mit einer Antwort samt Quellenangaben
+image: /aktuelles/img/herbsttagung.jpg
+imageAlt: "Key Visual der DDG-Herbsttagung 2026: Eine Ärztin im weißen Kittel macht einen großen Schritt auf einem Weg am Fluss, daneben der Schriftzug „Diabetes. Digital. Denken.“ sowie Ort und Datum: Messe Dresden, 13.–14. November 2026"
 ---
 Wir freuen uns sehr: Diesen Freitag ist MiA DDG auf der diesjährigen Herbsttagung der Deutschen Diabetes Gesellschaft in Dresden vertreten! Unser Team stellt dort den aktuellen Stand des Projekts vor.
+
+<p class="post-logo"><img src="/aktuelles/img/ddg_ht_logo.svg" alt="Logo der Diabetes Herbsttagung 2026 der Deutschen Diabetes Gesellschaft (DDG)" width="1411" height="398"></p>
 
 **Chatbot MiA DDG – Vertrauenswürdiges Empowerment für Patient:innen und digitaler Support für HCP**
 

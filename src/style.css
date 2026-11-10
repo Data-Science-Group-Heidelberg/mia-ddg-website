@@ -400,6 +400,9 @@ details.faq p { margin-top: 0.8rem; max-width: var(--measure); }
 .post-row p { max-width: var(--measure); }
 @media (max-width: 640px) { .post-row { grid-template-columns: minmax(0, 1fr); } }
 .post img { display: block; width: 100%; max-width: 30rem; height: auto; margin: 0.75rem auto; border-radius: var(--radius); }
+/* Kleines Logo im Beitrag – heller Grund, damit die Originalfarben auch im Dark Mode stimmen */
+.post .post-logo { width: fit-content; max-width: 100%; margin: 1.5rem 0; padding: 0.9rem 1.2rem; background: #ffffff; border: 1px solid var(--line); border-radius: var(--radius); }
+.post .post-logo img { width: 15rem; max-width: 100%; margin: 0; border-radius: 0; }
 .post .section-head { margin-bottom: 1rem; }
 .post .date { font-size: var(--step-0); }
 .post h1 { font-size: var(--step-3); }
