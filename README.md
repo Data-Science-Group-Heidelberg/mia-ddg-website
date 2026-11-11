@@ -18,6 +18,7 @@ npm start       # http://localhost:8080, lädt bei jeder Änderung neu
 | `src/_data/site.json` | Seitenname und Navigationspunkte |
 | `src/aktuelles/*.md` | Blogbeiträge |
 | `src/_data/publications.yaml` | Publikationsliste |
+| `src/_data/unterlagen.json` | Unterlagen zum Download (Teilnehmendeninformation je Studienzentrum, Flyer); PDFs liegen in `src/unterlagen/`. Ein Eintrag ohne `file` erscheint als „Folgt in Kürze“ |
 | `src/style.css`, `src/fonts/`, `src/unterlagen/` | werden unverändert kopiert |
 
 ## Neuen Beitrag schreiben
@@ -50,14 +51,33 @@ Lokal bauen (ohne Entwürfe), etwa um vorher zu prüfen:
 npm run build
 ```
 
-Beiträge mit `draft: true` im Kopfbereich erscheinen nur in der lokalen Vorschau (`npm start`), nie auf der veröffentlichten Seite.
+Beiträge mit `draft: true` im Kopfbereich erscheinen nirgends, weder in der Vorschau noch auf der veröffentlichten Seite. Um Entwürfe lokal anzusehen, die Vorschau mit `npm run start:drafts` statt `npm start` starten.
+
+### Vorschau für das Review
+
+Die Vorschau liegt bei Cloudflare Pages unter https://mia-ddg-preview.pages.dev (Projekt `mia-ddg-preview`) und ist mit einem gemeinsamen Passwort geschützt. Sie ist außerdem für Suchmaschinen gesperrt (`noindex` in jeder Seite, dazu der Header `X-Robots-Tag`, der auch PDFs abdeckt). Die echte Seite ist davon nicht betroffen.
+
+Veröffentlichen (baut `_preview/` und lädt es zusammen mit dem Passwortschutz aus `functions/` hoch):
+
+```bash
+npm run deploy:preview
+```
+
+Einmalig vorher:
+
+1. `npx wrangler@4.147.0 login` ausführen und im Browser bei Cloudflare anmelden.
+2. Passwort hinterlegen: `npx wrangler@4.147.0 pages secret put PREVIEW_PASSWORD --project-name mia-ddg-preview` ausführen und das Passwort eingeben. Danach `npm run deploy:preview` erneut ausführen, damit es gilt. Ohne Passwort zeigt die Vorschau nur einen Hinweis und bleibt gesperrt.
+
+Reviewer:innen öffnen den Link, geben im Anmeldefenster des Browsers einen beliebigen Benutzernamen und das Passwort ein. Passwort ändern: den Befehl aus Schritt 2 erneut ausführen, danach `npm run deploy:preview`.
+
+Lokal testen: Datei `.dev.vars` mit `PREVIEW_PASSWORD=…` anlegen (wird nicht committet), dann `npx wrangler@4.147.0 pages dev _preview`.
 
 ### Einmalige Einrichtung
 
 1. Im Repository unter **Settings → Pages** bei „Source“ **GitHub Actions** auswählen.
 2. Ebenda unter „Custom domain“ `www.mia-ddg.de` eintragen und speichern.
 3. Beim Domain-Anbieter folgende DNS-Einträge anlegen:
-   - `www` als **CNAME** auf `<konto>.github.io`, wobei `<konto>` der Name der GitHub-Organisation bzw. des Kontos ist, dem das Repository gehört (nicht der Repository-Name)
+   - `www` als **CNAME** auf `data-science-group-heidelberg.github.io` (Name der GitHub-Organisation, nicht des Repositorys)
    - für die Domain ohne `www` (`@`) vier **A**-Einträge: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (GitHub leitet dann auf `www` weiter)
 4. Sobald GitHub die Domain geprüft hat (kann bis zu 24 Stunden dauern), unter **Settings → Pages** „Enforce HTTPS“ aktivieren.
 5. Empfohlen: Die Domain in den Einstellungen der Organisation (**Settings → Pages → Verified domains**) verifizieren, damit niemand anderes sie mit GitHub Pages verwenden kann.

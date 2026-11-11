@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{%- if preview %}
+<meta name="robots" content="noindex, nofollow">
+{%- endif %}
 <title>{% if title and title != site.name %}{{ title }} · {% endif %}{{ site.name }}</title>
 <meta name="description" content="{{ description or site.description }}">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -60,7 +63,7 @@
     </div>
     <div>
       <h3>Kontakt</h3>
-      <p>Studienteam MiA DDG<br><span class="tbd">[E-Mail-Adresse des Studienteams]</span></p>
+      <p>Studienteam MiA DDG<br><a href="mailto:info@mia-ddg.de">info@mia-ddg.de</a></p>
     </div>
     <div>
       <h3>Rechtliches</h3>
@@ -89,6 +92,19 @@
   }
   setup('fs-toggle', 'fs-large', 'mia-fs', 'Normale Schriftgröße', 'Schrift vergrößern');
   setup('hc-toggle', 'hc', 'mia-hc', 'Normaler Kontrast', 'Kontrast erhöhen');
+
+  // Kopfzeile beim Scrollen verkleinern. Zwei Schwellen, damit sie nicht flackert, wenn die kleinere Kopfzeile die Seite verschiebt
+  var header = document.querySelector('.site-header'), ticking = false;
+  function onScroll(){
+    ticking = false;
+    var y = window.scrollY, compact = header.classList.contains('is-compact');
+    if(!compact && y > 64) header.classList.add('is-compact');
+    else if(compact && y < 8) header.classList.remove('is-compact');
+  }
+  if(header){
+    window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    onScroll();
+  }
 })();
 </script>
 </body>
